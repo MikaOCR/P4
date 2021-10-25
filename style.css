@@ -133,7 +133,11 @@ a:hover {
 .d-bloc h5 a,
 .d-bloc h6 a,
 .d-bloc p a {
-    color: rgba(255, 255, 255, .6);
+    color: rgba(255, 255, 255, 1);  /* changement de l'opacité des icons footer */
+}
+
+.icon-md {
+    margin: 15px 0 15px 0;      /* Ajout d'une marge */
 }
 
 .d-bloc .a-btn:hover,
@@ -651,7 +655,7 @@ label,
 a {
     font-family: "helvetica";
     font-weight: 400;
-    color: #575757!important;
+    color: #000000!important; /* Changement de couleur des textes/titres */
 }
 
 .container {
@@ -677,7 +681,17 @@ a {
 }
 
 p {
-    font-size: 11px;
+    font-size: 12px;    /* Augmentation d'un pixel */
+}
+
+.text-style {
+    font-size: 20px;
+    text-align: center;
+}
+                        /* Modification pour les textes page 1 */
+.text-style2 {
+    font-size: 20px;
+    font-style: italic;
 }
 
 .tight-width-whitespace {
@@ -741,6 +755,7 @@ h4 {
 
 .portfolio-thumb {
     margin-bottom: 24px;
+    width: 100%;
 }
 
 .portfolio-row {
@@ -771,17 +786,19 @@ h4 {
 }
 
 .bgc-atomic-tangerine {
-    background-color: #F3976C;
+    background-color: #AD643C;
 }
 
 .tc-white {
-    color: #F3976C!important;
+    color: #ffffff!important;
 }
 
 .btn-atomic-tangerine {
-    background: #F3976C;
+    background: #AD643C;
     color: #FFFFFF!important;
 }
+
+                /* Ajustement des couleurs afin d'avoir un meilleur contraste */
 
 .btn-atomic-tangerine:hover {
     background: #c27956!important;
@@ -822,8 +839,10 @@ h4 {
 }
 
 .bg-presentation {
-    background-image: url("img/image-de-presentation.bmp");
+    background-image: url("img/image-de-presentation.jpg");
 }
+
+    /* Changement de format img */
 
 @media (max-width: 1024px) {
     .bloc {
@@ -848,17 +867,7 @@ h4 {
     }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-    .b-parallax {
-        background-attachment: scroll;
-    }
-}
-
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
-    .b-parallax {
-        background-attachment: scroll;
-    }
-}
+/* SUPPRESSION MEDIA QUERIES MAX/MIN DEVICE */
 
 @media (max-width: 991px) {
     .container {
@@ -872,10 +881,7 @@ h4 {
         overflow-x: hidden;
         position: relative;
     }
-    .bloc {
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
-    }
+
     .bloc-group,
     .bloc-group .bloc {
         display: block;
@@ -884,8 +890,8 @@ h4 {
     .bloc-fill-screen .fill-bloc-top-edge,
     .bloc-fill-screen .fill-bloc-bottom-edge {
         padding: 0 20px;
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
+
+        /* SUPPRESSION padding-left: constant(safe-area-inset-left) padding-right: constant(safe-area-inset-right) */
     }
 }
 
@@ -982,6 +988,11 @@ h4 {
     .bloc-lg {
         padding: 40px 0;
     }
+
+    .portfolio-thumb {
+        width: 100%;
+    }
+
     .bloc-sm,
     .bloc-md {
         padding-left: 0;
@@ -1027,6 +1038,14 @@ h4 {
         height: 320px;
     }
 }
+
+.social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* AJOUT .SOCIAL POUR ALIGNER FOOTER */
 
 @media (max-width: 400px) {
     .bloc {
